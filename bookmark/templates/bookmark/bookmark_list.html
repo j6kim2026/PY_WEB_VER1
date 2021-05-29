@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            list-style: none;
+            font-family: 'Nanum Pen Script', cursive;
+            margin: 0px;
+            padding: 0px;
+        }
+        .content {
+            text-align: center;
+            background-color: crimson;
+        }
+
+        .title {
+            font-size: 100px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .list1 {
+            font-size: 35px;
+        }
+
+        .list1 a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1 class="title">
+        좋아하는
+        유튜브
+        영상 모음
+    </h1>
+
+    <ul>
+        {% for bookmark in object_list %}
+            <li class="list1"><a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a></li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>

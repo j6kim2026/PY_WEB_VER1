@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: 'Nanum Gothic Coding', monospace;
+            color: white;
+        }
+
+        .bgimg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_text {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        #title {
+            top: 20%;
+            font-size: 120px;
+        }
+
+        #made {
+            top: 55%;
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        #menu {
+            top: 40%;
+            font-size: 50px;
+        }
+
+        li{
+            list-style: none;
+            display: inline-block;
+            margin-left: 50px;
+            margin-right: 50px;
+            font-size: 70px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #signin {
+            top: 5%;
+            left: 38%;
+        }
+
+        .listlist {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../media/My_snk.jpg" alt="Image loading failed" class="bgimg">
+    <h1 class="main_text" id="title"><b>FRAMEWORK</b></h1>
+    <h1 class="main_text" id="made">Made by Jane K & DLAB</h1>
+    <ul class="main_text" id="signin">
+        <li class="listlist"><a href="#">SIGN IN</a></li>
+        <li class="listlist"><a href="{% url 'register' %}">SIGN UP</a></li>
+    </ul>
+<ul class="main_text" id="menu">
+    <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
+    <li><a href="{% url 'bookmark_index' %}">BOOKMARK</a></li>
+    <li><a href="{% url 'blog_index' %}">BLOG</a></li>
+</ul>
+
+
+</body>
+</html>

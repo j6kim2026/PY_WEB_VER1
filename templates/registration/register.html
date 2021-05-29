@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            list-style: none;
+            font-family: 'Nanum Pen Script', cursive;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .username {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content1">
+        <form method="post" action=".">{% csrf_token %}
+            <div class="username">
+                {{ form.username.label_tag }} {{ form.username }}
+            </div>
+
+            <div class="username">
+                {{ form.password1.label_tag }} {{ form.password1 }}
+            </div>
+
+            <div class="username">
+                {{ form.password2.label_tag }} {{ form.password2 }}
+            </div>
+
+            <button type="submit">SIGN UP</button>
+        </form>
+    </div>
+</body>
+</html>

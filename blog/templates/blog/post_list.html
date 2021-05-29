@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post List</title>
+    {% load staticfiles %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Nanum+Gothic+Coding&family=swap" rel="stylesheet">
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        #content {
+            border: solid 2px black
+            width: 500px;
+            height: 700px;
+        }
+
+        .blog_image {
+            width: 300px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .title {
+            font-family: 'Nanum Gothic Coding', monospace;
+            color: black;
+            font-size: 30px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    {%for post in object_list%}
+        <p class="title">{{ post.title }}</p>
+        <img src="{{ post.image.url }}" class="blog_image">
+        <p>{{ post.description }}</p>
+        <li>Created Date: {{  object.create_date  }}</li>
+        <li>Modified Date: {{  object.modify_date  }}</li>
+    {%endfor%}
+</div>
+
+</body>
+</html>
+
+#f55648
